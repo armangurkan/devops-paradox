@@ -13,7 +13,8 @@ spec:
   rules:
   - http:
       paths:
-      - backend:
+      - pathType: Prefix
+        backend:
           service:
             name: {{ .Values.service.name }}
             port:
